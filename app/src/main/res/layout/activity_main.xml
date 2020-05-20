@@ -121,7 +121,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="binarytodecimal"
+            android:onClick="binaryCovertor"
             android:text="Convert" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
     private int i = 0;
     private int octal = 0;
     private int temp;
-    private TextView deci, octa;
+    private String hexadecimal;
+    private TextView deci;
+    private TextView octa;
+    private TextView hexa;
 
 
     @Override
@@ -27,10 +30,11 @@ public class MainActivity extends AppCompatActivity {
         Number = (EditText) findViewById(R.id.binary_number);
         deci = (TextView) findViewById(R.id.decimal_number);
         octa = (TextView) findViewById(R.id.octal_number);
+        hexa = (TextView) findViewById(R.id.hexadecimal_number);
 
     }
 
-    public void binarytodecimal(View view) {
+    public void binaryCovertor(View view) {
         decimal = 0;
         octal = 0;
 
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 //            Log.v("main", "" + temp);
             if (i != 0) {
                 deci.setText(decimal + "");
+                hexadecimal = Integer.toHexString(decimal);
 
             }
         }
@@ -71,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         if (i != 0) {
             octa.setText("" + octal);
         }
+        hexa.setText(hexadecimal);
 
 
     }
